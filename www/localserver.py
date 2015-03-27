@@ -23,7 +23,7 @@ def hello():
     return 'Local server ON'
 
 def dload(url):
-   
+
     #sel=Selector()
     #directory=sel.get_save_dir()
     directory=config.DIRECTORY
@@ -32,7 +32,7 @@ def dload(url):
     if directory:
         os.chdir(directory)
     if not Windows:
-        subprocess.Popen(['gnome-terminal', '-x', 'youtube-dl',url])
+        subprocess.Popen(['x-terminal-emulator', '-x', 'youtube-dl',url])
     else:
         if config.WindowsConEmu:
             subprocess.Popen(['ConEmu64', '/cmd ', 'youtube-dl',url])
